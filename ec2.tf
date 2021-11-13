@@ -8,7 +8,7 @@ data "aws_ami" "latest-amazon-ami" {
 }
 
 resource "aws_instance" "terraform_instance_hw" {
-  ami                    = data.aws_ami.latest-amazon-ami.id
+  ami                    = "ami-087c17d1fe0178315"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.week_4_us_east_1a.id
   vpc_security_group_ids = [aws_security_group.week4.id]
